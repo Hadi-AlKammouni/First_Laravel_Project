@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\Palindrome;
 use App\Http\Controllers\Seconds;
+use App\Http\Controllers\OutputText;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/hello', [FirstController::class, 'sayHello'])->name("say-hello");
 Route::get('/palindrome', [Palindrome::class, 'checkPalindromeNumber'])->name("check-palindrome-number");
 Route::get('/seconds', [Seconds::class, 'secondsNumber'])->name("seconds-number");
+Route::get('/text', [OutputText::class, 'outputTextField'])->name("text-field");
