@@ -6,6 +6,8 @@ use App\Http\Controllers\FirstController;
 use App\Http\Controllers\Palindrome;
 use App\Http\Controllers\Seconds;
 use App\Http\Controllers\OutputText;
+use App\Http\Controllers\RandomBeer;
+
 
 
 /*
@@ -27,3 +29,4 @@ Route::get('/hello', [FirstController::class, 'sayHello'])->name("say-hello");
 Route::get('/palindrome', [Palindrome::class, 'checkPalindromeNumber'])->name("check-palindrome-number");
 Route::get('/seconds', [Seconds::class, 'secondsNumber'])->name("seconds-number");
 Route::get('/text', [OutputText::class, 'outputTextField'])->name("text-field");
+Route::get('/beer', [RandomBeer::class, 'getRandomBeer'])->name("random-beer");
