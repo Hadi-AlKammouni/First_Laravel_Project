@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\Palindrome;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/hello', [FirstController::class, 'sayHello'])->name("say-hello");
+Route::get('/palindrome', [Palindrome::class, 'checkPalindromeNumber'])->name("check-palindrome-number");
